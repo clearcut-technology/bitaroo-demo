@@ -1,14 +1,12 @@
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+
+import { BitcoinInputComponent } from './components/bitcoin-input/bitcoin-input.component';
 
 @Component({
-  standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [BitcoinInputComponent],
   selector: 'app-root',
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'demo';
-}
+export class AppComponent {}
