@@ -40,3 +40,7 @@ Thumbs.db
 
 .nx/cache
 .angular
+.firebase
+.nx
+.vscode
+.firebaserc
