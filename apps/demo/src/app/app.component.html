@@ -1,4 +1,5 @@
-<div class="w-full h-full flex flex-col justify-center items-center gap-2">
+<div class="flex flex-col items-center justify-center w-full h-full gap-2">
   <h1>Bitcoin Input Demo</h1>
-  <app-bitcoin-input></app-bitcoin-input>
+  <app-bitcoin-input [(bitcoins)]="value"></app-bitcoin-input>
+  <span>You have entered the value: {{ value }}</span>
 </div>

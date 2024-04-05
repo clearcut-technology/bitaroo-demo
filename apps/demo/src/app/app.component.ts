@@ -1,3 +1,5 @@
+import BigNumber from 'bignumber.js';
+
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { BitcoinInputComponent } from './components/bitcoin-input/bitcoin-input.component';
@@ -9,4 +11,6 @@ import { BitcoinInputComponent } from './components/bitcoin-input/bitcoin-input.
   standalone: true,
   templateUrl: './app.component.html',
 })
-export class AppComponent {}
+export class AppComponent {
+  value = new BigNumber(0);
+}

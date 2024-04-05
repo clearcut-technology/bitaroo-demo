@@ -1,1 +1,23 @@
-<p>Bitcoin Input</p>
+<div class="flex flex-col items-center">
+  <span
+    class="text-4xl border-b-2 cursor-pointer"
+    [class.border-neutral-500]="hasFocus"
+    [class.border-transparent]="!hasFocus"
+    (click)="focusInput()"
+  >
+    <span class="text-orange-500">{{ blackValue() }}</span
+    ><span class="text-neutral-500">{{ greyValue() }}</span>
+  </span>
+  <input
+    #numberInput
+    class="w-0 h-0"
+    type="text"
+    inputmode="decimal"
+    min="0"
+    pattern="/[0-9.]/"
+    (input)="numberInputChanged($event)"
+    (focus)="hasFocus = true"
+    (blur)="hasFocus = false"
+    [value]="inputValue()"
+  />
+</div>
